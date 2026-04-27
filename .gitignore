@@ -1,0 +1,40 @@
+# ─────────────────────────────────────────────────────────────
+# Terraform — NEVER commit these to GitHub
+# ─────────────────────────────────────────────────────────────
+
+# State files contain your AWS resource IDs and can expose secrets
+*.tfstate
+*.tfstate.backup
+*.tfstate.*.backup
+
+# Terraform working directory (downloaded providers, modules)
+.terraform/
+.terraform.lock.hcl
+
+# Variable files with your personal/sensitive values
+terraform.tfvars
+*.tfvars
+
+# Keep the example file — it's safe to commit
+!terraform.tfvars.example
+!*.tfvars.example
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Override files (local overrides, not for sharing)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ─────────────────────────────────────────────────────────────
+# OS / IDE
+# ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
